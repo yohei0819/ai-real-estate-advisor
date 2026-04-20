@@ -2,6 +2,8 @@
 
 namespace App\Services\Ai;
 
+use App\Exceptions\AiException;
+
 class PromptRegistry
 {
     /** @var array<string, string> */
@@ -11,6 +13,10 @@ class PromptRegistry
 
     public function get(string $name): string
     {
-        return $this->prompts[$name] ?? '';
+        if (!isset($this->prompts[$name])) {
+            throw new AiException("Prompt [{$name}] is not registered.");
+        }
+
+        return $this->prompts[$name];
     }
 }

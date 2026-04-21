@@ -1,8 +1,25 @@
-# ai-real-estate-advisor
+# AI不動産投資シミュレーター
 
-AI不動産投資シミュレーター（Gemini API連携）
+Gemini API連携を前提にしたモノレポ初期雛形です。
 
-## 初期化直後の最適な作業開始・進行ステップ（Gemini専用 / モノレポ想定）
+## 初期構成
+
+- `apps/web`: Nuxt 3 フロントエンド（予定）
+- `apps/admin`: Next.js 管理画面（予定）
+- `apps/api`: Laravel 11 + Gemini API サービス層雛形
+- `packages/shared-types`: 共通型
+- `packages/shared-utils`: 投資計算ロジック
+- `packages/ai-prompts`: AIプロンプト関連型
+- `packages/ui`: UIトークン / Tailwindプリセット
+- `.github/instructions`, `.github/prompts`, `.github/agents`: AIペア開発向けガイド
+
+## Gemini統一方針
+
+1. AIコードは `apps/api/app/Services/Ai/GeminiClient` 経由に統一
+2. Prompt/Schema/RateLimitをサービス層に集約
+3. AI連携の実装と運用はGeminiに統一
+
+## 作業開始・進行ステップ（Gemini専用 / モノレポ想定）
 
 1. **Issue #1「Monorepo土台構築」から開始**  
    Turborepo構成で `apps/web-nuxt`（Nuxt）, `apps/web-next`（Next）, `apps/api`（Laravel）, `packages/*`（TypeScript共通）を作成し、OpenAI/Anthropic関連は入れずGemini専用方針をIssue本文に明記する。

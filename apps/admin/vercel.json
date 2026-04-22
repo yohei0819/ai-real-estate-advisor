@@ -1,0 +1,8 @@
+{
+  "framework": "nextjs",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm -F @ai-real-estate/admin build",
+  "env": {
+    "API_BASE_URL": "@api_base_url"
+  }
+}

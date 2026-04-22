@@ -137,3 +137,21 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# PHP / Laravel
+apps/api/vendor/
+apps/api/bootstrap/cache/*.php
+apps/api/storage/
+apps/api/*.sqlite
+apps/api/**/*.sqlite
+apps/api/.phpunit.result.cache
+
+# Nuxt build output
+apps/web/.output/
+apps/web/.nuxt/
+
+# Next.js build output
+apps/admin/.next/
+
+# Turbo cache
+.turbo/

@@ -9,13 +9,15 @@ class SchemaRegistry
     {
         return [
             'type' => 'object',
-            'required' => ['score', 'rationale', 'risks', 'actionItems', 'disclaimer'],
+            'required' => ['riskScore', 'summary', 'recommendation', 'rationale', 'risks', 'actionItems', 'disclaimer'],
             'properties' => [
-                'score' => ['type' => 'integer'],
-                'rationale' => ['type' => 'array', 'items' => ['type' => 'string']],
-                'risks' => ['type' => 'array', 'items' => ['type' => 'string']],
-                'actionItems' => ['type' => 'array', 'items' => ['type' => 'string']],
-                'disclaimer' => ['type' => 'string'],
+                'riskScore'      => ['type' => 'integer', 'minimum' => 1, 'maximum' => 10],
+                'summary'        => ['type' => 'string'],
+                'recommendation' => ['type' => 'string'],
+                'rationale'      => ['type' => 'array', 'items' => ['type' => 'string']],
+                'risks'          => ['type' => 'array', 'items' => ['type' => 'string']],
+                'actionItems'    => ['type' => 'array', 'items' => ['type' => 'string']],
+                'disclaimer'     => ['type' => 'string'],
             ],
         ];
     }

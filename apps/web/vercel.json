@@ -1,0 +1,9 @@
+{
+  "framework": "nuxtjs",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm -F @ai-real-estate/web build",
+  "outputDirectory": ".output/public",
+  "env": {
+    "NUXT_PUBLIC_API_BASE": "@api_base_url"
+  }
+}

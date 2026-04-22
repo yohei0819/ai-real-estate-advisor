@@ -1,5 +1,28 @@
 {
   "name": "@ai-real-estate/web",
   "private": true,
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "lint": "nuxt typecheck",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "nuxt": "^3.16.2",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@ai-real-estate/shared-types": "workspace:*",
+    "@ai-real-estate/shared-utils": "workspace:*",
+    "@ai-real-estate/ui": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vue-tsc": "^2.2.8",
+    "vitest": "^3.1.2",
+    "@vue/test-utils": "^2.4.6",
+    "@types/node": "^22.15.3",
+    "tailwindcss": "^3.4.17",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "happy-dom": "^17.4.4"
+  }
 }

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {},
+    "test": {
+      "dependsOn": [
+        "^build"
+      ]
+    },
+    "@ai-real-estate/admin#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**"]
+    },
+    "@ai-real-estate/admin#dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
